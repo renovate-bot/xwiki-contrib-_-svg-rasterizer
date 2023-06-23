@@ -29,7 +29,7 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>svg-rasterizer</artifactId>
-  <version>15.6-SNAPSHOT</version>
+  <version>15.6</version>
   <name>SVG Rasterizing API</name>
   <description>APIs to rasterize SVG images</description>
   <properties>
@@ -47,7 +47,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/svg-rasterizer.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/svg-rasterizer.git</developerConnection>
     <url>https://github.com/xwiki-contrib/svg-rasterizer/tree/master</url>
-    <tag>HEAD</tag>
+    <tag>svg-rasterizer-15.6</tag>
   </scm>
   <developers>
     <developer>
