@@ -17,7 +17,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.xwiki.platform.svg.internal;
+package org.xwiki.contrib.svg.internal;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -47,7 +47,7 @@ import org.xwiki.container.Response;
 import org.xwiki.container.servlet.ServletResponse;
 import org.xwiki.model.reference.DocumentReference;
 import org.xwiki.model.reference.DocumentReferenceResolver;
-import org.xwiki.platform.svg.SVGRasterizer;
+import org.xwiki.contrib.svg.SVGRasterizer;
 import org.xwiki.resource.temporary.TemporaryResourceReference;
 import org.xwiki.resource.temporary.TemporaryResourceStore;
 import org.xwiki.test.mockito.MockitoComponentMockingRule;

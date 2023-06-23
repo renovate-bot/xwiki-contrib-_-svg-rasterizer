@@ -17,7 +17,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.xwiki.platform.svg.script;
+package org.xwiki.contrib.svg.script;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -26,8 +26,8 @@ import javax.inject.Singleton;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.xwiki.component.annotation.Component;
+import org.xwiki.contrib.svg.SVGRasterizer;
 import org.xwiki.model.reference.DocumentReference;
-import org.xwiki.platform.svg.SVGRasterizer;
 import org.xwiki.resource.ResourceReference;
 import org.xwiki.resource.ResourceReferenceSerializer;
 import org.xwiki.script.service.ScriptService;

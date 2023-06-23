@@ -23,20 +23,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.xwiki.platform</groupId>
-    <artifactId>xwiki-platform-svg</artifactId>
-    <version>15.6-SNAPSHOT</version>
+    <groupId>org.xwiki.contrib</groupId>
+    <artifactId>parent-platform</artifactId>
+    <version>14.10</version>
   </parent>
-  <artifactId>xwiki-platform-svg-rasterizer</artifactId>
-  <name>XWiki Platform - SVG Tools - SVG Rasterizer</name>
+  <groupId>org.xwiki.contrib</groupId>
+  <artifactId>svg-rasterizer</artifactId>
+  <version>15.6-SNAPSHOT</version>
+  <name>SVG Rasterizing API</name>
   <description>APIs to rasterize SVG images</description>
   <properties>
-    <!-- The actual ratio is a bit higher, but Jacoco doesn't measure correctly the coverage for try-with-resource,
-      see https://github.com/jacoco/jacoco/issues/82 -->
-    <xwiki.jacoco.instructionRatio>0.91</xwiki.jacoco.instructionRatio>
+    <xwiki.issueManagement.jira.id>SVGRASTER</xwiki.issueManagement.jira.id>
+    <xwiki.release.jira.skip>false</xwiki.release.jira.skip>
+    <xwiki.jacoco.instructionRatio>1.00</xwiki.jacoco.instructionRatio>
     <!-- Name to display by the Extension Manager -->
     <xwiki.extension.name>SVG Rasterizing API</xwiki.extension.name>
+    <!-- Category to display by the Extension Manager -->
+    <xwiki.extension.category>api</xwiki.extension.category>
+    <!-- Old names of this module used for retro compatibility when resolving dependencies of old extensions -->
+    <xwiki.extension.features>org.xwiki.platform:xwiki-platform-svg-rasterizer</xwiki.extension.features>
   </properties>
+  <scm>
+    <connection>scm:git:git://github.com/xwiki-contrib/svg-rasterizer.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/svg-rasterizer.git</developerConnection>
+    <url>https://github.com/xwiki-contrib/svg-rasterizer/tree/master</url>
+    <tag>HEAD</tag>
+  </scm>
+  <developers>
+    <developer>
+      <id>vmassol</id>
+      <name>Vincent Massol</name>
+    </developer>
+    <developer>
+      <id>xwikidev</id>
+      <name>XWiki Development Team</name>
+    </developer>
+  </developers>
   <dependencies>
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
@@ -77,32 +99,32 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-container-api</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-url-api</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-resource-api</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-resource-temporary</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-model-api</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-container-servlet</artifactId>
-      <version>${project.version}</version>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
@@ -112,7 +134,6 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
-
     <!-- Test Dependencies -->
     <dependency>
       <groupId>org.xwiki.commons</groupId>
